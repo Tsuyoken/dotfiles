@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Fleon
+Comment=Flat Theme (C) 2021 Tsuyoken
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=kennedy
+IconTheme=Adwaita
+CursorTheme=Adwaita
+CursorSize=24

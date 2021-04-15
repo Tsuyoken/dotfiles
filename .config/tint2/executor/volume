@@ -1,0 +1,47 @@
+#!/usr/bin/env bash
+source $HOME/.owl4ce_var
+
+noterr() { echo "Install alsa-utils!"; exit 1; }
+type -p "amixer" &> /dev/null || noterr
+
+CHK_MUTE() { amixer -D pulse get Master | grep '%' | grep -oE '[^ ]+$' | grep off; }
+VOLUME="$(amixer -D pulse get Master | grep '%' | head -n 1 | awk -F'[' '{print $2}' | awk -F'%' '{print $1}')"
+
+icon() {
+    if [[ "$VOLUME" = "0" ]]; then
+        icon=""
+    elif [[ "$VOLUME" -lt "10" ]]; then
+        icon=""
+    elif [[ "$VOLUME" -lt "30" ]]; then
+        icon=""
+    elif [[ "$VOLUME" -lt "70" ]]; then
+        icon=""
+    else
+        icon=""
+    fi
+    
+    echo "$icon"
+}
+
+case $1 in
+    percent)    if CHK_MUTE &> /dev/null; then
+                    echo "Muted"
+                else
+                    echo "$VOLUME%"
+                fi
+    ;;
+    icon)       if CHK_MUTE &> /dev/null; then
+                    echo ""
+                else
+                    icon
+                fi
+	;;
+    up)         amixer -D pulse set Master on -q
+                amixer -D pulse sset Master "$AUDIO_STEPS"%+ -q
+    ;;
+    down)       amixer -D pulse set Master on -q
+                amixer -D pulse sset Master "$AUDIO_STEPS"%- -q
+    ;;
+    mute)       amixer -D pulse set Master 1+ toggle -q
+	;;
+esac    

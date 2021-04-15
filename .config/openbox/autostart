@@ -1,0 +1,45 @@
+## Restore Wallpaper
+nitrogen --restore
+
+## xfce4-settings daemon
+xfsettingsd &
+
+## Start Compositing Manager
+exec picom -b &
+
+## Launch Polybar
+#sh ~/.config/polybar/launch.sh
+#sh ~/.config/polybar/blocks/launch.sh
+
+## Launch Tint2
+#tint2 -c /home/ferdi/.config/tint2/mechanical-vertical.tint2rc &
+#tint2 -c /home/ferdi/.config/tint2/win.tint2rc
+tint2 &
+## Launch Conky
+exec conky -c .config/conky/eww.conkyrc &
+
+## Start Music Player Daemon
+exec mpd &
+mpd &
+
+## Notification Daemon
+exec dunst &
+
+## Thunar Daemon
+exec thunar --daemon &
+
+## Enable Super Keys For Menu
+ksuperkey -e 'Super_L=Alt_L|F1' &
+ksuperkey -e 'Super_R=Alt_L|F1' &
+
+## Enable power management
+xfce4-power-manager &
+
+## Adjust backlight (AMD)
+#blight -d amdgpu_bl0 set 20%
+
+## Getting Started
+#gs_run_once.sh
+
+## Issue Tracker (Don't Remove IT)
+issue_tracker.sh

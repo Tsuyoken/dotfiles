@@ -1,0 +1,94 @@
+conky.config = {
+own_window = true,
+own_window_type = 'normal',
+own_window_transparent = true,
+own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
+own_window_colour = '#000000',
+own_window_class = 'Conky',
+own_window_title = 'sidebar Conky',
+
+minimum_width = 400, 
+minimum_height = 880,
+maximum_width = 400,
+
+gap_x = 40,--## left | right
+gap_y = -138,--## up | down
+
+
+use_xft = true,
+font = 'PrgamataPro:size=11',
+
+
+override_utf8_locale = true,
+
+uppercase = false,
+draw_shades = false,--yes
+default_shade_color = 'black',
+
+draw_outline = false,-- amplifies text if yes
+default_outline_color = 'black',
+
+default_color = '#F7F7F1',-- light
+color1 = '#373E4D',-- dark
+color2 = '#bf616a',-- Red
+color3 = '#a3be8c',-- Green
+color4 = '#ebcb8b',-- Yellow
+color5 = '#81a1c1',-- Blue
+
+draw_borders = false,
+stippled_borders = 0,
+border_inner_margin = 0,
+border_outer_margin = 0,
+border_width = 0,
+draw_graph_borders = true,--no
+background = true,
+use_spacer = 'none',
+no_buffers = true,
+short_units = true,
+pad_percents = 2,
+imlib_cache_size = 0,
+double_buffer = true,
+update_interval = 1,
+mpd_host = "localhost",
+mpd_port = 6600,
+};
+
+conky.text = [[
+
+${image ~/.config/conky/bg-dark.png -p 0,0}
+${voffset 0}
+${voffset -20}${offset 90}${font PragmataPro:Bold:size=50}${time %H:%M}
+
+${voffset -125}${offset 140}${font PragmataPro:Bold:size=12}${time %a %-d %B}
+
+
+${image ~/.icons/custom/unicorn/ram.png -p 20,190 -s 40x40}
+${voffset 0}${offset 80}${font PragmataPro:Bold:size=11}RAM
+${voffset 0}${offset 80}${font PragmataPro:size=12}$mem / $memmax
+
+${image ~/.icons/custom/unicorn/cpu.png -p 20,255 -s 40x40}
+${voffset -15}${offset 80}${font PragmataPro:Bold:size=11}CPU
+${voffset 0}${offset 80}${font PragmataPro:size=10}${cpu cpu0}%
+
+${image ~/.icons/custom/unicorn/temp.png -p 20,305 -s 40x40}
+${voffset -15}${offset 80}${font PragmataPro:Bold:size=11}Temp
+${voffset 0}${offset 80}${font PragmataPro:size=10}${hwmon 3 temp 1}°C
+
+${image ~/.icons/custom/unicorn/storage.png -p 20,365 -s 35x35}
+${voffset -10}${offset 80}${font PragmataPro:Bold:size=11}Storage
+${voffset 0}${offset 80}${font PragmataPro:size=10}${fs_used /home} / ${fs_size /home}
+
+${image ~/.icons/custom/unicorn/battery.png -p 20,420 -s 40x40}
+${voffset -15}${offset 80}${font PragmataPro:Bold:size=11}Battery
+${voffset 0}${offset 80}${font PragmataPro:size=10}${battery}
+
+${image ~/.icons/custom/unicorn/wifi.png -p 25,475 -s 38x40}
+${voffset -15}${offset 80}${font PragmataProt:Bold:size=11}Wifi
+${voffset 0}${offset 80}${font PragmataPro:size=10}${wireless_essid wlan0}
+
+${image ~/.icons/custom/unicorn/lagu.png -p 10,640 -s 100x100}
+
+${voffset 105}${offset 130}${font PragmataPro:Bold:size=20}${if_mpd_playing}${mpd_artist}${else}Is not playing${endif}
+
+${voffset -30}${offset 130}${font PragmataPro:size=13}${if_mpd_playing}${mpd_title 10}${else}Music${endif}
+]];
