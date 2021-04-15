@@ -2,7 +2,7 @@
 - OS : Arch Linux
 - WM : Openbox
 - Terminal : URxvt x Termite
-- Shell Zsh
+- Shell : Zsh
 - Panel : Tint
 - Compositor : Picom
 
