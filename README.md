@@ -1,8 +1,10 @@
 # Backup Dotfiles
 - OS : Arch Linux
 - WM : Openbox
-- Terminal : URxvt
+- Terminal : URxvt x Termite
 - Shell Zsh
+- Panel : Tint
+- Compositor : Picom
 
 
 
