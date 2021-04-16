@@ -2,7 +2,7 @@
 
 ! URXVT APPEARANCE
 URxvt.font:                       xft:mplus Nerd Font Mono:size=11,xft:Monospace:size=11:antialias=true:hinting=true
-URxvt.geometry:                   54x15
+URxvt.geometry:                   53x12
 URxvt.internalBorder:             20
 URxvt.cursorBlink:                true
 URxvt.cursorUnderline:            true
@@ -14,7 +14,6 @@ URxvt.scrollstyle:                plain
 URxvt.urgentOnBell:               false
 URxvt.depth:                      32
 URxvt.iso14755:                   false
-URxvt.iconFile:                   /home/ferdi/.icons/gladient/term.png
 ! Uncomment if to much font spacing
 !URxvt.letterSpace: -1
 
