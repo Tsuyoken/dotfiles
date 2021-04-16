@@ -1,6 +1,6 @@
 conky.config = {
 own_window = true,
-own_window_type = 'normal',
+own_window_type = 'desktop',
 own_window_transparent = true,
 own_window_hints = 'undecorated,below,skip_taskbar,skip_pager',
 own_window_colour = '#000000',
@@ -16,7 +16,7 @@ gap_y = -138,--## up | down
 
 
 use_xft = true,
-font = 'PrgamataPro:size=11',
+font = 'iosevka nerd font mono:size=11',
 
 
 override_utf8_locale = true,
