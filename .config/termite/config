@@ -44,23 +44,41 @@ size_hints = true
 
 [colors]
 
-background = #373E4D
-foreground = #F9F9F9
-cursor = #F9F9F9
+# special
+foreground      = #fefcfe
+foreground_bold = #fefcfe
+cursor          = #fefcfe
+background      = #37394d
 
-color0 = #434C5E
-color1 = #FA5AA4
-color2 = #2BE491
-color3 = #FA946E
-color4 = #63C5EA
-color5 = #CF8EF4
-color6 = #89CCF7
-color7 = #F9F9F9
-color8 = #4C566A
-color9 = #FA74B2
-color10 = #44EB9F
-color11 = #FAA687
-color12 = #7ACBEA
-color13 = #D8A6F4
-color14 = #A1D5F7
-color15 = #FFFFFF
+# black
+color0  = #424a5c
+color8  = #2f3542
+
+# red
+color1  = #fe2ea0
+color9  = #fe2ea0
+
+# green
+color2  = #2efe8c
+color10 = #2efe8c
+
+# yellow
+color3  = #fe992e
+color11 = #fe992e
+
+# blue
+color4  = #35d2fa
+color12 = #35d2fa
+
+# magenta
+color5  = #b74afe
+color13 = #b74afe
+
+# cyan
+color6  = #6bdff8
+color14 = #6bdff8
+
+# white
+color7  = #fefcfe
+color15 = #fefcfe
+
